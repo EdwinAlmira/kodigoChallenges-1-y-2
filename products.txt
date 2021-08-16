@@ -1,3 +1,3 @@
-Producto: Mesa - Precio: $204.0
-Producto: Sala - Precio: $459.0
-Producto: Comedor - Precio: $320.0
+Producto: Monitor - Precio: $140.0
+Producto: Mouse - Precio: $33.0
+Producto: Teclado - Precio: $20.0

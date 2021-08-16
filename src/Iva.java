@@ -1,12 +1,29 @@
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Iva {
     public static void main(String[] args) {
-        threeProductsFile();
+        int answer;
+        boolean it;
+        Scanner sc= new Scanner(System.in);
+        try {
+            do {
+                System.out.println("Menú para  sacar IVA: \n 1- Un producto \n 2- Tres productos \n 3- Tres productos guardando datos en un archivo");
+                answer = sc.nextInt();
+            }while (answer < 1 || answer > 3);
+            switch (answer){
+                case 1: oneProduct(); break;
+                case 2: threeProducts(); break;
+                case 3: threeProductsFile(); break;
+            }
+        }catch (InputMismatchException e){
+            System.out.println("Error: Tiene que ingresar un valor entero entre 1, 2 y 3.");
+        }
+
     }
 
     //one product method
@@ -19,7 +36,7 @@ public class Iva {
         System.out.println("Precio del producto: ");
         price = sc.nextDouble();
         iva = price * 0.13;
-        System.out.println(twoDecimal.format(iva));
+        System.out.println("IVA: $"+twoDecimal.format(iva));
     }
 
     //Three products method
@@ -67,7 +84,7 @@ public class Iva {
 
         //saving the hashmap in a txt file
         //Setting the out path
-        File file = new File("/home/almira/Documents/Cursos/Kodigo/Challenges/products.txt");
+        File file = new File("/home/almira/Documents/Cursos/Kodigo/Challenges-1-y-2/products.txt");
         BufferedWriter bf = null;
         try {
             bf = new BufferedWriter( new FileWriter(file) );
