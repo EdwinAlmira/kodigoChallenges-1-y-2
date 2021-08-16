@@ -5,5 +5,5 @@
 - **Hola  mundo:** ./src/HolaMundo.java
 - **Ejercicios de IVA:** ./src/Iva.java
 	> En el ejercicio se implementan las tres partes del challenge y se unifican con un menú
-	> Destacar los imports necesarios para File y BufferedWriter
+	> Destacar los imports necesarios para que funcionen  File y BufferedWriter
 
